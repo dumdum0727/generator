@@ -3,7 +3,7 @@
 const currentURL = window.location.href;
 const urlSearchParams = new URLSearchParams(currentURL.split('?')[1]);
 console.log(urlSearchParams.get('sender'));
-const url = `https://dumdum0727.zombie.jp/generator/api/get-message?sender=${urlSearchParams.get('sender')}`;
+const url = `https://dumdum0727.zombie.jp/generator/puclic/api/get-message?sender=${urlSearchParams.get('sender')}`;
 // const url = `http://localhost:8000/api/get-message?sender=${urlSearchParams.get('sender')}`;
 
 const sender = document.getElementById('sender');
