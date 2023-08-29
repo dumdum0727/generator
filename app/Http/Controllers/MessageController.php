@@ -28,6 +28,6 @@ class MessageController extends Controller
 
         $message = Message::where('sender', $parameter)->first();
 
-        return response()->json($message, 200,[], JSON_UNESCAPED_UNICODE);
+        return $message;
     }
 }
