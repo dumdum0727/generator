@@ -6,7 +6,8 @@ document.getElementById('send').addEventListener('click', () => {
         console.log(entry[0], entry[1]);
     }
 
-    fetch('http://localhost:8000/api/store', {
+    fetch('https://dumdum0727.zombie.jp/generator/api/store', {
+    // fetch('http://localhost:8000/api/store', {
         method: 'POST',
         body: formData
     })
@@ -14,7 +15,8 @@ document.getElementById('send').addEventListener('click', () => {
     .then(data => {
         console.log(data.result);
         if (data.result === 'Message stored successfully') {
-            window.location.href = `http://localhost:8000/message.html?sender=${formData.get('sender')}`;
+            window.location.href = `https://dumdum0727.zombie.jp/generator/message.html?sender=${formData.get('sender')}`;
+            // window.location.href = `http://localhost:8000/message.html?sender=${formData.get('sender')}`;
         }
     })
     .catch(error => {
